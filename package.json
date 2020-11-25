@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/meganlavallee/README_Generator#readme",
   "dependencies": {
+    "inquirer": "^7.3.3",
     "modules": "^0.4.0"
   }
 }

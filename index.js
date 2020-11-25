@@ -1,32 +1,44 @@
 const inquirer = require('inquirer');
 
-//It's done when the application asks the user, "What is your name?"
 
 inquirer
     .prompt([
         {
+
+            // Installation
             type: 'input',
-            message: 'What is your name?',
-            name: 'name',
+            message: 'How do I install this project?',
+            name: 'installation',
         },
         {
 
-            //It's done when the application asks the user, "What languages do you know?"
-
-            type: 'languages',
-            message: 'What languages do you know?',
-            name: 'languages',
+            //Usage
+            type: 'usage',
+            message: 'What is the projects usage?',
+            name: 'usage',
         },
 
-        //It's done when the application asks the user, “What is your preferred method of communication?"
-        
+            //Credits
         {
             type: 'communication',
-            message: 'what is your preferred method of communication?',
-            name: 'confirm',
+            message: 'Collaborators are listed here.',
+            name: 'credits',
         },
 
-        //It's done after I have written those responses to a file.
+        {
+
+            // License
+            type: 'input',
+            message: 'What is the licensing agreement?',
+            name: 'license',
+        },
+        {
+
+            // Contact Info
+            type: 'input',
+            message: 'How Do I Reach You?',
+            name: 'contact',
+        },
     ])
     .then((response) =>
         response.confirm === response.password
