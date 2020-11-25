@@ -1,3 +1,6 @@
 # README_Generator
 
-![alt text](https://github.com/meganlavallee/README_Generator/issues/1#issue-751059908)
+![alt text](assets/images/installingjson)git 
+![alt text](assets/images/inquirer)git 
+![alt text](assets/images/capture)git 
+
