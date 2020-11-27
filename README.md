@@ -10,14 +10,11 @@ HTML, CSS, and a Script sheet were made for the project to begin.  As the HTML w
 Division of Labor:
 I, Megan, soley did all work for this.  
 
-Conclusion:
-This quiz is a great way to gain knowledge about things you might never have known anything about, early photography. 
-
 Deployment:
 Photography quiz deployment will be on webpage through Github. Users will be able to view through webpage listed down below as well. 
 
 Conclusion:
-Photography is an interesting topic that has evolved a lot during it's lifetime and new advances are always on the horizon as technology changes rapidly in day to day life.  Learning about older techniques in photography is interesting and eye opening from what we used to have to what the majority uses for cameras today.  
+Photography is an interesting topic that has evolved a lot during it's lifetime and new advances are always on the horizon as technology changes rapidly in day to day life.  Learning about older techniques in photography is interesting and eye opening from what we used to have to what the majority uses for cameras today.  This quiz is a great way to gain knowledge about things you might never have known anything about, early photography. 
 
 
 Link to deployed app
