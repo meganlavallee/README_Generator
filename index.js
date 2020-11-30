@@ -48,10 +48,4 @@ fs.writeFile('README.md', 'Project Read Me', function(err){
   }
   console.log("data written")
   
-  // fs.readFile('README.md', function (err, data) {
-  //   if (err) {
-  //     return console.error(err);
-  //   }
-  //   console.log("read" + data.toString());
-  // })
 })
