@@ -1,6 +1,7 @@
-const inquirer = require("inquirer");
+const questions = require("inquirer");
+var fs = require("fs");
 
-inquirer
+questions
   .prompt([
     {
       // Installation
@@ -40,3 +41,17 @@ inquirer
       ? console.log("Success!")
       : console.log("It works")
   );
+
+fs.writeFile('README.md', 'Project Read Me', function(err){
+  if (err) {
+    return console.error(err);
+  }
+  console.log("data written")
+  
+  // fs.readFile('README.md', function (err, data) {
+  //   if (err) {
+  //     return console.error(err);
+  //   }
+  //   console.log("read" + data.toString());
+  // })
+})
