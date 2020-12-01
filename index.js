@@ -1,5 +1,5 @@
 const questions = require("inquirer");
-var fs = require("fs");
+const fs = require('fs');
 
 questions
   .prompt([
@@ -41,11 +41,16 @@ questions
       ? console.log("Success!")
       : console.log("It works")
   );
+  
+    
 
-fs.writeFile('README.md', 'Project Read Me', function(err){
-  if (err) {
+
+  fs.writeFile('README.md', 'Project Read Me',      
+  
+  function(err){
+    if (err) {
     return console.error(err);
-  }
-  console.log("data written")
+      }
+        console.log("made readme file")
   
 })
