@@ -36,21 +36,12 @@ questions
       name: "contact",
     },
   ])
-  .then((response) =>
-    response.confirm === response.password
-      ? console.log("Success!")
-      : console.log("It works")
+  .then((response) =>{
+    console.log(response);
+    fs.writeFile('README.md', JSON.stringify(response), (err) =>
+    err ? console.log(err) : console.log('Success!')
   );
-  
-    
+  }
+    //look at the mini project and follow that logic. Using util and passing the response through another function that makes it look like 'nicer' markdown and then you give it to the .then function
+  );
 
-
-  fs.writeFile('README.md', 'Project Read Me',      
-  
-  function(err){
-    if (err) {
-    return console.error(err);
-      }
-        console.log("made readme file")
-  
-})
