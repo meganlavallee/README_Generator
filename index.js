@@ -1,8 +1,11 @@
-const questions = require("inquirer");
+const inquirer = require("inquirer");
 const fs = require('fs');
+const util = require('util');
 
-questions
-  .prompt([
+const writeFileAsync = util.promisify(fs.writeFile);
+
+const promptUser = () =>
+  inquirer.prompt([
     {
       // Installation
       type: "input",
@@ -36,12 +39,16 @@ questions
       name: "contact",
     },
   ])
-  .then((response) =>{
-    console.log(response);
-    fs.writeFile('README.md', JSON.stringify(response), (err) =>
-    err ? console.log(err) : console.log('Success!')
-  );
-  }
-    //look at the mini project and follow that logic. Using util and passing the response through another function that makes it look like 'nicer' markdown and then you give it to the .then function
-  );
+    .then((response) => {
+      console.log(response);
+      fs.writeFile('README.md', JSON.stringify(response), (err) =>
+        err ? console.log(err) : console.log('Success!')
+      );
+    }
+      //look at the mini project and follow that logic. Using util and passing the response through another function that makes it look like 'nicer' markdown and then you give it to the .then function
+    );
 
+ promptUser()
+   .then((answers) => writeFileAsync('README.md', (answers)))
+   .then(() => console.log('Successfully wrote to readme.md'))
+   .catch((err) => console.error(err));
