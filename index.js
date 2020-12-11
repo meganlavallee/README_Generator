@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
 const util = require('util');
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -41,7 +42,7 @@ const promptUser = () =>
   ])
     .then((response) => {
       console.log(response);
-      fs.writeFile('README.md', JSON.stringify(response), (err) =>
+      fs.writeFile('README.md', generateMarkdown(response), (err) =>
         err ? console.log(err) : console.log('Success!')
       );
     }
