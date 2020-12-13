@@ -1,55 +1,60 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
-const util = require('util');
+// const util = require('util');
 const generateMarkdown = require("./utils/generateMarkdown");
 
-const writeFileAsync = util.promisify(fs.writeFile);
+// Questions for Read Me File
+const questions = [
+  {
+    message: "What is the project title?",
+    name: "title",
+  },
+  {
+    message: "Describe your project",
+    name: "description"
+  },
+  {
+    message: "How do I install this project?",
+    name: "installation",
+  },
+  {
+    message: "What is the projects usage?",
+    name: "usage",
+  },
+  {
+    message: "Collaborators are listed here.",
+    name: "credits",
+  },
+  {
+    message: "What is the licensing agreement?",
+    name: "license",
+  },
+  {
+    message: "What's your github username?",
+    name: "username",
+  },
+  {
+    message: "What's your email address?",
+    name: "email",
+  },
+];
 
-const promptUser = () =>
-  inquirer.prompt([
-    {
-      // Installation
-      type: "input",
-      message: "How do I install this project?",
-      name: "installation",
-    },
-    {
-      //Usage
-      type: "usage",
-      message: "What is the projects usage?",
-      name: "usage",
-    },
+// Write Read Me File
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, () => {
+    console.log("written to file");
+  });
+};
 
-    //Credits
-    {
-      type: "communication",
-      message: "Collaborators are listed here.",
-      name: "credits",
-    },
+// Export
+function init (questions) {
+  inquirer.prompt(questions).then((answsers) => {
+    console.log(answers);
+    const readMe = generateMarkdown(answers);
+    console.log(readMe);
+    writeToFile("README.md", readMe);
+  });
+}
 
-    {
-      // License
-      type: "input",
-      message: "What is the licensing agreement?",
-      name: "license",
-    },
-    {
-      // Contact Info
-      type: "input",
-      message: "How Do I Reach You?",
-      name: "contact",
-    },
-  ])
-    .then((response) => {
-      console.log(response);
-      fs.writeFile('README.md', generateMarkdown(response), (err) =>
-        err ? console.log(err) : console.log('Success!')
-      );
-    }
-      //look at the mini project and follow that logic. Using util and passing the response through another function that makes it look like 'nicer' markdown and then you give it to the .then function
-    );
-
- promptUser()
-   .then((answers) => writeFileAsync('README.md', (answers)))
-   .then(() => console.log('Successfully wrote to readme.md'))
-   .catch((err) => console.error(err));
+// Getting Program Going
+init(questions);
