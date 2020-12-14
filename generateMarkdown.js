@@ -5,93 +5,93 @@
 // }
 
 // function to generate markdown for README
-function generateMarkdown(answers) {
-  const {
-    title,
-    description,
-    installation,
-    contributors,
-    test,
-    license,
-    licenseUrl,
-    githubUsername,
-    email,
-  } = answers;
+// function generateMarkdown(answers) {
+//   const {
+//     title,
+//     description,
+//     installation,
+//     contributors,
+//     test,
+//     license,
+//     licenseUrl,
+//     githubUsername,
+//     email,
+//   } = answers;
 
-  return `# Title: **${title}**
+//   return `# Title: **${title}**
 
-  &nbsp;
-  &nbsp;
-  ## Description:
+//   &nbsp;
+//   &nbsp;
+//   ## Description:
 
-  **${description}**
+//   **${description}**
 
-  &nbsp;
-  &nbsp;
-  ## Installation: 
+//   &nbsp;
+//   &nbsp;
+//   ## Installation: 
 
-  *${installation}*
+//   *${installation}*
 
 
-  &nbsp;
-  &nbsp;
-  ## Contributors: 
+//   &nbsp;
+//   &nbsp;
+//   ## Contributors: 
   
-  **${contributors}**
+//   **${contributors}**
 
 
-  &nbsp;
-  &nbsp;
-  ## Test: 
+//   &nbsp;
+//   &nbsp;
+//   ## Test: 
   
-  **${test}**
+//   **${test}**
 
 
-  &nbsp;
-  &nbsp;
-  ## License: 
+//   &nbsp;
+//   &nbsp;
+//   ## License: 
   
-  ${license}
+//   ${license}
 
 
-  &nbsp;
-  &nbsp;
-  ## License URL: 
-  ${licenseUrl}
+//   &nbsp;
+//   &nbsp;
+//   ## License URL: 
+//   ${licenseUrl}
 
 
-  &nbsp;
-  &nbsp;
-  ## GitHub UserName:
+//   &nbsp;
+//   &nbsp;
+//   ## GitHub UserName:
   
-  @${githubUsername}
+//   @${githubUsername}
 
 
-  &nbsp;
-  &nbsp;
-  ## Email: 
+//   &nbsp;
+//   &nbsp;
+//   ## Email: 
   
-  **${email}**
+//   **${email}**
 
-  &nbsp;
-  &nbsp;
-  # Screen Shots
-  &nbsp;
-  &nbsp;
-  ![Screenshot (21)]()
-  &nbsp;
-  &nbsp;
-  ![Screenshot (22)]()
-  &nbsp;
-  &nbsp;
-  # Video Clip
-  &nbsp;
-  &nbsp;
-  ![](readme.gif)
-  &nbsp;
-  &nbsp;
-  ![](readmepreview.gif)
-`;
-}
+//   &nbsp;
+//   &nbsp;
+//   # Screen Shots
+//   &nbsp;
+//   &nbsp;
+//   ![Screenshot (21)]()
+//   &nbsp;
+//   &nbsp;
+//   ![Screenshot (22)]()
+//   &nbsp;
+//   &nbsp;
+//   # Video Clip
+//   &nbsp;
+//   &nbsp;
+//   ![](readme.gif)
+//   &nbsp;
+//   &nbsp;
+//   ![](readmepreview.gif)
+// `;
 
-module.exports = generateMarkdown;
+
+// module.exports = generateMarkdown();

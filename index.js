@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
-// const util = require('util');
+const util = require('util');
 const generateMarkdown = require("./generateMarkdown");
 
 // Questions for Read Me File
@@ -40,21 +40,26 @@ const questions = [
 ];
 
 // Write Read Me File
+// fs.writeFile(README.md, data, (err) => {
+//   if (err) throw err;
+//   console.log("not working");
+// };
+
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, () => {
-    console.log("written to file");
-  });
-};
+fs.writeToFile(fileName, data, () => {
+console.log("written to file");
+   });
+ };
 
-// Export
-function init (questions) {
-  inquirer.prompt(questions).then((answsers) => {
-    console.log(answers);
-    const readMe = generateMarkdown(answers);
-    console.log(readMe);
-    writeToFile("README.md", readMe);
-  });
-}
+//  Export
+ function init (questions) {
+   inquirer.prompt(questions).then((answsers) => {
+      // console.log(answers);
+      // const readMe = generateMarkdown(answers);
+      // console.log(readMe);
+      // writeToFile("README.md", readMe);
+   });
+ }
 
-// Getting Program Going
-init(questions);
+//  Getting Program Going
+ init(questions);
