@@ -30,7 +30,7 @@ undefined
         
 ## Test
 ![image](https://user-images.githubusercontent.com/73404164/100271823-5ca4f580-2f17-11eb-912b-77e452337ec4.png)
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=T28L0ldPNsE)
+[![Watch the video](https://www.youtube.com/watch?v=T28L0ldPNsE)](https://www.youtube.com/watch?v=T28L0ldPNsE)
         
 ## License
 MIT
