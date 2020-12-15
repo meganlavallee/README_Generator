@@ -36,6 +36,6 @@ undefined
 MIT
 
 ## Questions
-GitHub profile: [undefined](https://github.com/meganlavallee)
+GitHub profile: [Megan](https://github.com/meganlavallee)
 
 Email: megan.lavallee@yahoo.com
