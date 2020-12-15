@@ -1,65 +1,70 @@
 const inquirer = require("inquirer");
-const fs = require('fs');
-const util = require('util');
-const generateMarkdown = require("./generateMarkdown");
+const fs = require("fs");
+const util = require("util");
+// const promptUser = require('./questions');
+// const { prompt } = require("inquirer");
+// const writeFileAsync = util.promisify(fs.writeFile);
 
-// Questions for Read Me File
-const questions = [
-  {
-    message: "What is the project title?",
-    name: "title",
-  },
-  {
-    message: "Describe your project",
-    name: "description"
-  },
-  {
-    message: "How do I install this project?",
-    name: "installation",
-  },
-  {
-    message: "What is the projects usage?",
-    name: "usage",
-  },
-  {
-    message: "Collaborators are listed here.",
-    name: "credits",
-  },
-  {
-    message: "What is the licensing agreement?",
-    name: "license",
-  },
-  {
-    message: "What's your github username?",
-    name: "username",
-  },
-  {
-    message: "What's your email address?",
-    name: "email",
-  },
-];
+// Array
+const promptUser = () =>
+  inquirer.prompt([
+    {
+      type: 'input',
+      message: "What is the project title?",
+      name: "title",
+    },
+    {
+      type: 'input',
+      message: "Describe your project",
+      name: "description"
+    },
+    {
+      type: 'input',
+      message: "How do I install this project?",
+      name: "installation",
+    },
+    {
+      type: 'input',
+      message: "What is the projects usage?",
+      name: "usage",
+    },
+    {
+      type: 'input',
+      message: "Collaborators are listed here.",
+      name: "credits",
+    },
+    {
+      type: 'input',
+      message: "What is the licensing agreement?",
+      name: "license",
+    },
+    {
+      type: 'input',
+      message: "What's your github username?",
+      name: "username",
+    },
+    {
+      type: 'input',
+      message: "What's your email address?",
+      name: "email",
+    },
+  ])
 
-// Write Read Me File
-// fs.writeFile(README.md, data, (err) => {
-//   if (err) throw err;
-//   console.log("not working");
-// };
 
-function writeToFile(fileName, data) {
-fs.writeToFile(fileName, data, () => {
-console.log("written to file");
-   });
- };
+promptUser()
+  .then((answers) => ('README.md', (answers)))
+  .then(() => console.log('Running through this point'))
+  .catch((err) => console.error(err));
 
-//  Export
- function init (questions) {
-   inquirer.prompt(questions).then((answsers) => {
-      // console.log(answers);
-      // const readMe = generateMarkdown(answers);
-      // console.log(readMe);
-      // writeToFile("README.md", readMe);
-   });
- }
 
-//  Getting Program Going
- init(questions);
+
+// Write README file
+// function writeToFile(fileName, data) {
+
+
+// Function to Initialize Program
+// function init() 
+
+
+// Function to Call Program
+// init();
